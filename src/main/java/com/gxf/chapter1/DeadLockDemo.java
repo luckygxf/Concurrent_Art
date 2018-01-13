@@ -27,6 +27,7 @@ public class DeadLockDemo {
     //Task1
     static class Task1 implements Runnable{
         //lock lock1 lock2
+        @Override
         public void run() {
             synchronized (lock1){
                 try {
@@ -46,6 +47,7 @@ public class DeadLockDemo {
     //Task2
     static class Task2 implements Runnable{
         //lock lock2 lock1
+        @Override
         public void run() {
             synchronized (lock2){
                 try {
